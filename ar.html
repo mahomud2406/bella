@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Snakk med Bella i AR 🐾</title>
+<meta name="description" content="Sett Bella på gulvet i ditt eget rom og snakk med henne på norsk eller arabisk.">
+<meta name="theme-color" content="#101319">
+<link rel="icon" href="images/bella-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/bella-icon.png">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="ar.css">
+</head>
+<body>
+
+<!-- Kameraet ligger bakerst, 3D-laget oppå -->
+<video id="cam" playsinline muted autoplay></video>
+<canvas id="scene"></canvas>
+
+<!-- ============ STARTSKJERM ============ -->
+<div class="screen" id="intro">
+  <div class="intro-card">
+    <img class="intro-face" src="images/bella-icon.png" alt="" width="96" height="96">
+    <h1 class="display">Snakk med Bella</h1>
+    <p class="intro-lead">
+      Sett Bella ned på gulvet i rommet ditt, og snakk med henne.
+      Hun forstår <strong>norsk</strong> og <strong>arabisk</strong>, og svarer på samme språk.
+    </p>
+
+    <ul class="intro-list">
+      <li><span>📷</span> Kameraet brukes bare til å vise rommet bak henne.</li>
+      <li><span>🎤</span> Mikrofonen står på så du kan snakke fritt — skru den av når du vil.</li>
+      <li><span>🔒</span> Ingenting lagres, og ingenting sendes noe sted i vanlig modus.</li>
+    </ul>
+
+    <button class="btn primary" id="enterAR">Start AR</button>
+    <button class="btn ghost" id="enter3D">Bare 3D, uten kamera</button>
+
+    <p class="intro-foot">
+      <a href="index.html">← Tilbake til Bellas side</a>
+      <button class="linklike" id="openSettings">Koble til ekte AI</button>
+    </p>
+    <p class="intro-note" id="supportNote"></p>
+  </div>
+</div>
+
+<!-- ============ AR-GRENSESNITT ============ -->
+<div class="hud" id="hud" hidden>
+
+  <div class="hud-top">
+    <button class="round" id="exitBtn" aria-label="Avslutt">✕</button>
+    <div class="lang-switch" role="group" aria-label="Språk">
+      <button class="lang on" data-lang="nb-NO">Norsk</button>
+      <button class="lang" data-lang="ar-SA">عربي</button>
+    </div>
+    <button class="round" id="settingsBtn" aria-label="Innstillinger">⚙</button>
+  </div>
+
+  <p class="place-hint" id="placeHint">Rett kameraet mot gulvet og trykk for å sette ned Bella</p>
+
+  <div class="hud-bottom">
+    <div class="bubble" id="bubble" hidden><p id="bubbleText"></p></div>
+
+    <div class="heard" id="heard" hidden><span id="heardText"></span></div>
+
+    <div class="controls">
+      <button class="round big" id="micBtn" aria-pressed="true" aria-label="Skru mikrofonen av eller på">
+        <span id="micIco">🎤</span>
+        <span class="pulse" id="micPulse"></span>
+      </button>
+      <form class="say" id="sayForm">
+        <input id="sayInput" type="text" placeholder="… eller skriv til Bella" autocomplete="off">
+        <button type="submit" aria-label="Send">➤</button>
+      </form>
+      <button class="round" id="againBtn" aria-label="Flytt Bella">↻</button>
+    </div>
+
+    <p class="status" id="status"></p>
+  </div>
+</div>
+
+<!-- ============ INNSTILLINGER ============ -->
+<div class="screen modal" id="settings" hidden>
+  <div class="intro-card">
+    <h2 class="display">Ekte AI (valgfritt)</h2>
+    <p class="intro-lead">
+      Bella svarer helt fint uten dette — hun har en innebygd hjerne som
+      virker uten nett og uten oppsett.
+    </p>
+    <p class="intro-lead">
+      Vil du at hun skal svare på hva som helst, kan du lime inn din egen
+      gratis API-nøkkel fra
+      <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a>.
+      Nøkkelen lagres <strong>kun i denne nettleseren</strong> og sendes bare til Google.
+    </p>
+
+    <label class="field">
+      <span>API-nøkkel</span>
+      <input id="keyInput" type="password" placeholder="AIza…" autocomplete="off" spellcheck="false">
+    </label>
+    <label class="field">
+      <span>Modell</span>
+      <input id="modelInput" type="text" placeholder="gemini-2.5-flash" autocomplete="off" spellcheck="false">
+    </label>
+
+    <p class="intro-note">
+      Får du feilmelding om at modellen ikke finnes, prøv
+      <code>gemini-2.0-flash</code> eller <code>gemini-flash-latest</code>.
+    </p>
+
+    <div class="btn-row">
+      <button class="btn primary" id="saveKey">Lagre</button>
+      <button class="btn ghost" id="clearKey">Slett nøkkel</button>
+    </div>
+    <p class="intro-foot"><button class="linklike" id="closeSettings">Lukk</button></p>
+    <p class="intro-note" id="keyStatus"></p>
+  </div>
+</div>
+
+<script type="module" src="ar.js"></script>
+</body>
+</html>

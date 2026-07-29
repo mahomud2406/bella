@@ -157,6 +157,47 @@ main, header, footer { position: relative; z-index: 1; }
 
 .hint { text-align: center; color: var(--ink-2); font-size: .85rem; margin-top: 1.2rem; }
 
+.btn-ar { background: var(--grad); color: #fff; box-shadow: var(--shadow); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+/* ---------------- AR-invitasjon ---------------- */
+
+.ar-card {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 320px);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1.6rem, 5vw, 3rem);
+  border-radius: var(--r);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.ar-card .lead { margin-bottom: 1.5rem; }
+.ar-note { color: var(--ink-2); font-size: .8rem; margin: .9rem 0 0; }
+
+.ar-visual { position: relative; display: grid; place-items: center; min-height: 200px; }
+.ar-frame {
+  display: grid; place-items: center;
+  width: 170px; height: 170px;
+  border-radius: 28px;
+  background: linear-gradient(150deg, rgba(127,163,204,.35), rgba(224,163,173,.3));
+  border: 2px dashed var(--blue);
+  font-size: 4.5rem;
+  animation: bob 5s ease-in-out infinite;
+}
+.ar-cat { filter: drop-shadow(0 10px 16px rgba(0,0,0,.3)); }
+.ar-paw { position: absolute; font-size: 1.6rem; opacity: .55; animation: bob 4s ease-in-out infinite; }
+.ar-paw.p1 { top: 6%; left: 8%; }
+.ar-paw.p2 { bottom: 8%; right: 6%; animation-delay: -2s; }
+
+@media (max-width: 760px) {
+  .hero-cta { justify-content: center; }
+  .ar-card { grid-template-columns: 1fr; text-align: center; }
+  .ar-card .btn { margin-inline: auto; }
+}
+
 /* Reveal ved scroll. Klassen js-reveal settes av script.js, slik at
    innholdet er synlig som normalt hvis JavaScript ikke kjører. */
 .js-reveal .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
