@@ -4,51 +4,196 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bella 🐾 — verdens fineste katt</title>
-<meta name="description" content="En liten hyllest til Bella, en sølvfarget perserkatt født 16. februar 2025.">
-<meta name="theme-color" content="#8fa8c8">
+<meta name="description" content="Bella er en britisk langhårskatt født 16. februar 2025. Sølvgrå, fluffy og delvis bygget av bilmerker.">
+<meta name="theme-color" content="#6f8fb8">
 <link rel="icon" href="images/bella-icon.png" type="image/png">
 <link rel="apple-touch-icon" href="images/bella-icon.png">
 <meta property="og:title" content="Bella 🐾">
-<meta property="og:description" content="En liten hyllest til Bella, født 16. februar 2025.">
-<meta property="og:image" content="images/bella-1-sm.jpg">
+<meta property="og:description" content="Britisk langhår, født 16. februar 2025. Munnen er Mercedes.">
+<meta property="og:image" content="images/bella-4-sm.jpg">
 <meta property="og:type" content="website">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="paws" aria-hidden="true"></div>
+<!-- Bakgrunnsgrafikk -->
+<div class="bg" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+  <div class="grain"></div>
+</div>
+<div class="paw-field" id="pawField" aria-hidden="true"></div>
 
-<header class="hero">
-  <div class="hero-photo">
-    <img src="images/bella-1.jpg" alt="Bella, en sølvgrå perserkatt, sitter på et rekkverk ute" width="1050" height="1400" fetchpriority="high">
+<!-- ================= HERO ================= -->
+<header class="hero reveal">
+  <div class="hero-art">
+    <div class="ring" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" /></svg>
+    </div>
+    <div class="hero-photo">
+      <img src="images/bella-4.jpg" alt="Nærbilde av Bella, en sølvhvit britisk langhårskatt med grønnbrune øyne" width="787" height="1400" fetchpriority="high">
+    </div>
+    <span class="sticker s1">🐾</span>
+    <span class="sticker s2">✨</span>
+    <span class="sticker s3">💤</span>
   </div>
+
   <div class="hero-text">
-    <p class="eyebrow">Verdens fineste katt</p>
-    <h1>Bella</h1>
-    <p class="tagline">Sølvgrå perser, profesjonell vinduskikker og fulltids kosedyr.</p>
-    <p class="bday">🎂 Bursdag: <time datetime="2025-02-16">16. februar 2025</time></p>
-    <a class="scroll-cue" href="#alder">Bli med ned ↓</a>
+    <p class="eyebrow">Britisk langhår · hunnkatt · sjef i huset</p>
+    <h1 class="display">Bella</h1>
+    <p class="tagline">Én katt. Fire hjul verdt av bilmerker i ansiktet. Null interesse for noen av delene.</p>
+    <div class="chips">
+      <span class="chip">🎂 16. februar 2025</span>
+      <span class="chip">🇬🇧 Britisk langhår</span>
+      <span class="chip">💅 Hunnkatt</span>
+    </div>
+    <a class="btn btn-ghost" href="#garasje">Se hva hun er bygget av ↓</a>
   </div>
 </header>
 
 <main>
 
-  <section id="alder" class="section">
-    <h2>Hvor gammel er Bella nå?</h2>
-    <div class="age-card">
-      <div class="age-big"><span id="age-main">–</span></div>
-      <p class="age-sub" id="age-exact"></p>
-      <ul class="stats">
-        <li><span class="num" id="stat-days">–</span><span class="lab">dager i live</span></li>
-        <li><span class="num" id="stat-naps">–</span><span class="lab">lurer tatt (ca.)</span></li>
-        <li><span class="num" id="stat-cat">–</span><span class="lab">kattår</span></li>
-      </ul>
+  <!-- ================= GARASJEN ================= -->
+  <section id="garasje" class="section garage reveal">
+    <p class="kicker">Spesifikasjoner</p>
+    <h2 class="display">Under panseret</h2>
+    <p class="lead">Se nøye på ansiktet hennes. Det er ikke en katt — det er en bilutstilling.</p>
+
+    <div class="garage-grid">
+
+      <!-- Bildet med markører -->
+      <figure class="face-wrap">
+        <img src="images/bella-face.jpg" alt="Nærbilde av Bellas ansikt, med panne, nese og munn markert" width="782" height="900" loading="lazy">
+        <svg class="face-lines" viewBox="0 0 1104 1270" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <path class="lead-line" data-line="1" d="M676,912 C 820,980 900,980 1010,940" />
+          <path class="lead-line" data-line="2" d="M692,836 C 830,800 920,790 1030,760" />
+          <path class="lead-line" data-line="3" d="M635,489 C 760,430 860,410 1000,395" />
+        </svg>
+        <button class="hot" data-spot="1" style="left:61.2%; top:74%" aria-label="Munnen">1</button>
+        <button class="hot" data-spot="2" style="left:62.7%; top:65.8%" aria-label="Nesen">2</button>
+        <button class="hot" data-spot="3" style="left:57.5%; top:38.5%" aria-label="Pannen">3</button>
+        <figcaption>Trykk på tallene — eller start motoren.</figcaption>
+      </figure>
+
+      <!-- Spesifikasjonskort -->
+      <div class="specs">
+
+        <article class="spec" data-spot="1">
+          <div class="spec-logo">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="lg-stroke" cx="50" cy="50" r="40" />
+              <path class="lg-stroke" d="M50,50 V12 M50,50 L17,69 M50,50 L83,69" />
+            </svg>
+          </div>
+          <div class="spec-body">
+            <p class="spec-part">Munnen <span class="spec-no">01</span></p>
+            <h3 class="display">Mercedes</h3>
+            <p class="spec-note">Tre streker fra ett punkt. Trestjernen, rett fra fabrikken.</p>
+          </div>
+        </article>
+
+        <article class="spec" data-spot="2">
+          <div class="spec-logo">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <path class="lg-stroke" d="M16,28 Q50,12 84,28" />
+              <path class="lg-stroke" d="M28,40 H72" />
+              <path class="lg-stroke" d="M50,40 V88" />
+            </svg>
+          </div>
+          <div class="spec-body">
+            <p class="spec-part">Nesen <span class="spec-no">02</span></p>
+            <h3 class="display">Tesla</h3>
+            <p class="spec-note">Elektrisk, helt lydløs, og lader kun i solstriper.</p>
+          </div>
+        </article>
+
+        <article class="spec" data-spot="3">
+          <div class="spec-logo">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <path class="lg-stroke" d="M26,26 V54 Q26,74 50,78 Q74,74 74,54 V26" />
+              <path class="lg-stroke" d="M50,16 V88" />
+              <path class="lg-stroke" d="M33,44 H67" />
+            </svg>
+          </div>
+          <div class="spec-body">
+            <p class="spec-part">Pannen <span class="spec-no">03</span></p>
+            <h3 class="display">Maserati</h3>
+            <p class="spec-note">Treforken i pelsen. Italiensk håndverk på en britisk katt.</p>
+          </div>
+        </article>
+
+        <article class="spec engine-spec" data-spot="4">
+          <div class="spec-logo">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <path class="lg-stroke" d="M20,62 Q20,40 42,40 Q46,26 62,26 Q80,26 80,44 Q80,62 60,62 Z" />
+              <path class="lg-stroke" d="M30,76 h44" />
+            </svg>
+          </div>
+          <div class="spec-body">
+            <p class="spec-part">Motoren <span class="spec-no">04</span></p>
+            <h3 class="display">Sovende katt</h3>
+            <p class="spec-note">0 hestekrefter. 16 timers rekkevidde. Går på kos.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Motorkontroll -->
+    <div class="engine-bay">
+      <button class="btn btn-start" id="startBtn">
+        <span class="btn-ico" aria-hidden="true">▶</span>
+        <span id="startLabel">Start motoren</span>
+      </button>
+
+      <div class="dash">
+        <canvas id="scope" width="600" height="90" aria-hidden="true"></canvas>
+        <p class="subtitle" id="subtitle">Lyden er av. Trykk på knappen for å høre spesifikasjonene.</p>
+        <p class="subtitle-no" id="subtitleNo"></p>
+      </div>
+      <p class="hint" id="voiceHint"></p>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Nedtelling til neste bursdag</h2>
-    <div class="countdown" id="countdown">
+  <!-- ================= ALDER ================= -->
+  <section id="alder" class="section reveal">
+    <p class="kicker">Kilometerstand</p>
+    <h2 class="display">Hvor gammel er Bella nå?</h2>
+
+    <div class="age-card">
+      <div class="age-dial">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="dial-bg" cx="100" cy="100" r="86" />
+          <circle class="dial-fg" id="dialFg" cx="100" cy="100" r="86" />
+        </svg>
+        <div class="dial-mid">
+          <span class="dial-pct" id="dialPct">–</span>
+          <small>av året til<br>neste bursdag</small>
+        </div>
+      </div>
+
+      <div class="age-info">
+        <p class="age-big" id="age-main">–</p>
+        <p class="age-sub" id="age-exact"></p>
+        <ul class="stats">
+          <li><span class="num" id="stat-days">–</span><span class="lab">dager i live</span></li>
+          <li><span class="num" id="stat-naps">–</span><span class="lab">lurer tatt (ca.)</span></li>
+          <li><span class="num" id="stat-cat">–</span><span class="lab">kattår</span></li>
+          <li><span class="num" id="stat-purr">–</span><span class="lab">timer med maling</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEDTELLING ================= -->
+  <section class="section reveal">
+    <p class="kicker">Neste service</p>
+    <h2 class="display">Nedtelling til bursdagen</h2>
+    <div class="countdown">
       <div class="cd-unit"><span id="cd-d">–</span><small>dager</small></div>
       <div class="cd-unit"><span id="cd-h">–</span><small>timer</small></div>
       <div class="cd-unit"><span id="cd-m">–</span><small>minutter</small></div>
@@ -57,9 +202,14 @@
     <p class="cd-note" id="cd-note"></p>
   </section>
 
-  <section class="section">
-    <h2>Galleri</h2>
+  <!-- ================= GALLERI ================= -->
+  <section class="section reveal">
+    <p class="kicker">Bildearkiv</p>
+    <h2 class="display">Galleri</h2>
     <div class="gallery">
+      <button class="shot tall" data-full="images/bella-4.jpg" data-caption="Sjefen selv, i full oppløsning 🐾">
+        <img src="images/bella-4-sm.jpg" alt="Nærbilde av Bella som hviler på en rosa genser" loading="lazy" width="394" height="700">
+      </button>
       <button class="shot" data-full="images/bella-1.jpg" data-caption="Vaktsjef på rekkverket 🐾">
         <img src="images/bella-1-sm.jpg" alt="Bella sitter på rekkverket og ser ned" loading="lazy" width="525" height="700">
       </button>
@@ -73,14 +223,16 @@
     <p class="hint">Trykk på et bilde for å se det i stort format.</p>
   </section>
 
-  <section class="section">
-    <h2>Fakta om Bella</h2>
+  <!-- ================= FAKTA ================= -->
+  <section class="section reveal">
+    <p class="kicker">Datablad</p>
+    <h2 class="display">Fakta om Bella</h2>
     <div class="facts">
-      <div class="fact"><span class="ico">🐱</span><h3>Rase</h3><p>Perser i sølvchinchilla-drakt — den med den ekstra fluffy pelsen.</p></div>
-      <div class="fact"><span class="ico">🎂</span><h3>Født</h3><p>16. februar 2025. Skorpionens motsetning: en ekte vannmann.</p></div>
+      <div class="fact"><span class="ico">🇬🇧</span><h3>Rase</h3><p>Britisk langhår i sølvchinchilla-drakt — den lodne varianten av britisk korthår.</p></div>
+      <div class="fact"><span class="ico">💅</span><h3>Kjønn</h3><p>Hunnkatt, og hun lar deg vite hvem som bestemmer.</p></div>
+      <div class="fact"><span class="ico">🧶</span><h3>Pels</h3><p>Langt, tykt og ekstremt fluffy. Omtrent 60 % av henne er luft.</p></div>
+      <div class="fact"><span class="ico">🎂</span><h3>Født</h3><p>16. februar 2025 — en ekte vannmann.</p></div>
       <div class="fact"><span class="ico">🪟</span><h3>Favorittplass</h3><p>Vinduskarmen. Helst med sol, helst hele dagen.</p></div>
-      <div class="fact"><span class="ico">😾</span><h3>Spesialitet</h3><p>Å se mildt fornærmet ut på bilder, uansett humør.</p></div>
-      <div class="fact"><span class="ico">💤</span><h3>Hobby</h3><p>Sove. Så våkne. Så vurdere å sove igjen.</p></div>
       <div class="fact"><span class="ico">💛</span><h3>Superkraft</h3><p>Å gjøre en helt vanlig dag litt bedre.</p></div>
     </div>
   </section>
@@ -88,10 +240,12 @@
 </main>
 
 <footer>
-  <p>Laget med 💛 til Bella</p>
+  <p class="foot-name display">Bella</p>
+  <p>Laget med 💛 — munnen er fortsatt Mercedes.</p>
   <p class="small">🐾 🐾 🐾</p>
 </footer>
 
+<!-- Bildevisning -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bilde i full størrelse" hidden>
   <button class="lb-close" id="lb-close" aria-label="Lukk">✕</button>
   <figure>
