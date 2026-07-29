@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bella 🐾 — verdens fineste katt</title>
+<meta name="description" content="En liten hyllest til Bella, en sølvfarget perserkatt født 16. februar 2025.">
+<meta name="theme-color" content="#8fa8c8">
+<link rel="icon" href="images/bella-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/bella-icon.png">
+<meta property="og:title" content="Bella 🐾">
+<meta property="og:description" content="En liten hyllest til Bella, født 16. februar 2025.">
+<meta property="og:image" content="images/bella-1-sm.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="paws" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="hero-photo">
+    <img src="images/bella-1.jpg" alt="Bella, en sølvgrå perserkatt, sitter på et rekkverk ute" width="1050" height="1400" fetchpriority="high">
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow">Verdens fineste katt</p>
+    <h1>Bella</h1>
+    <p class="tagline">Sølvgrå perser, profesjonell vinduskikker og fulltids kosedyr.</p>
+    <p class="bday">🎂 Bursdag: <time datetime="2025-02-16">16. februar 2025</time></p>
+    <a class="scroll-cue" href="#alder">Bli med ned ↓</a>
+  </div>
+</header>
+
+<main>
+
+  <section id="alder" class="section">
+    <h2>Hvor gammel er Bella nå?</h2>
+    <div class="age-card">
+      <div class="age-big"><span id="age-main">–</span></div>
+      <p class="age-sub" id="age-exact"></p>
+      <ul class="stats">
+        <li><span class="num" id="stat-days">–</span><span class="lab">dager i live</span></li>
+        <li><span class="num" id="stat-naps">–</span><span class="lab">lurer tatt (ca.)</span></li>
+        <li><span class="num" id="stat-cat">–</span><span class="lab">kattår</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Nedtelling til neste bursdag</h2>
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><span id="cd-d">–</span><small>dager</small></div>
+      <div class="cd-unit"><span id="cd-h">–</span><small>timer</small></div>
+      <div class="cd-unit"><span id="cd-m">–</span><small>minutter</small></div>
+      <div class="cd-unit"><span id="cd-s">–</span><small>sekunder</small></div>
+    </div>
+    <p class="cd-note" id="cd-note"></p>
+  </section>
+
+  <section class="section">
+    <h2>Galleri</h2>
+    <div class="gallery">
+      <button class="shot" data-full="images/bella-1.jpg" data-caption="Vaktsjef på rekkverket 🐾">
+        <img src="images/bella-1-sm.jpg" alt="Bella sitter på rekkverket og ser ned" loading="lazy" width="525" height="700">
+      </button>
+      <button class="shot" data-full="images/bella-2.jpg" data-caption="Solkos i vinduskarmen ☀️">
+        <img src="images/bella-2-sm.jpg" alt="Bella krøllet sammen i en vinduskarm i solen" loading="lazy" width="525" height="700">
+      </button>
+      <button class="shot" data-full="images/bella-3.jpg" data-caption="Skyene er visst interessante i dag ☁️">
+        <img src="images/bella-3-sm.jpg" alt="Bella med hodet lent bakover mot en blå himmel" loading="lazy" width="525" height="700">
+      </button>
+    </div>
+    <p class="hint">Trykk på et bilde for å se det i stort format.</p>
+  </section>
+
+  <section class="section">
+    <h2>Fakta om Bella</h2>
+    <div class="facts">
+      <div class="fact"><span class="ico">🐱</span><h3>Rase</h3><p>Perser i sølvchinchilla-drakt — den med den ekstra fluffy pelsen.</p></div>
+      <div class="fact"><span class="ico">🎂</span><h3>Født</h3><p>16. februar 2025. Skorpionens motsetning: en ekte vannmann.</p></div>
+      <div class="fact"><span class="ico">🪟</span><h3>Favorittplass</h3><p>Vinduskarmen. Helst med sol, helst hele dagen.</p></div>
+      <div class="fact"><span class="ico">😾</span><h3>Spesialitet</h3><p>Å se mildt fornærmet ut på bilder, uansett humør.</p></div>
+      <div class="fact"><span class="ico">💤</span><h3>Hobby</h3><p>Sove. Så våkne. Så vurdere å sove igjen.</p></div>
+      <div class="fact"><span class="ico">💛</span><h3>Superkraft</h3><p>Å gjøre en helt vanlig dag litt bedre.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Laget med 💛 til Bella</p>
+  <p class="small">🐾 🐾 🐾</p>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bilde i full størrelse" hidden>
+  <button class="lb-close" id="lb-close" aria-label="Lukk">✕</button>
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
